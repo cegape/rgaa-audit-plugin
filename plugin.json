@@ -1,0 +1,30 @@
+{
+  "name": "rgaa-audit",
+  "version": "1.0.0",
+  "description": "Audit RGAA 4.1.2 (accessibilité numérique, France) pour sites et applications web. Analyse statique du code source (HTML/JSP/JSX/TSX/Vue/Svelte/PHP/CSS), audit dynamique via navigateur, et génération de la déclaration d'accessibilité (.md/.html) + grille de conformité (.csv).",
+  "author": {
+    "name": "Karim Cassam Chenaï",
+    "email": "karim.cassam@cegape.fr",
+    "organization": "CEGAPE"
+  },
+  "license": "MIT",
+  "keywords": [
+    "rgaa",
+    "rgaa-4.1.2",
+    "accessibility",
+    "accessibilite",
+    "wcag",
+    "wcag-2.1",
+    "a11y",
+    "audit",
+    "declaration-accessibilite"
+  ],
+  "homepage": "https://github.com/cegape/rgaa-audit-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cegape/rgaa-audit-plugin.git"
+  },
+  "skills": [
+    "skills/rgaa-audit"
+  ]
+}

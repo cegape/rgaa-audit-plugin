@@ -1,0 +1,763 @@
+{
+  "version": "RGAA 4.1.2",
+  "thematiques": {
+    "1": "Images",
+    "2": "Cadres",
+    "3": "Couleurs",
+    "4": "Multimédia",
+    "5": "Tableaux",
+    "6": "Liens",
+    "7": "Scripts",
+    "8": "Éléments obligatoires",
+    "9": "Structuration de l'information",
+    "10": "Présentation de l'information",
+    "11": "Formulaires",
+    "12": "Navigation",
+    "13": "Consultation"
+  },
+  "criteres": [
+    {
+      "id": "1.1",
+      "thematique": 1,
+      "numero": 1,
+      "titre": "Chaque image porteuse d’information a-t-elle une alternative textuelle ?",
+      "tests": []
+    },
+    {
+      "id": "1.2",
+      "thematique": 1,
+      "numero": 2,
+      "titre": "Chaque image de décoration est-elle correctement ignorée par les technologies",
+      "tests": []
+    },
+    {
+      "id": "1.3",
+      "thematique": 1,
+      "numero": 3,
+      "titre": "Pour chaque image porteuse d’information ayant une alternative textuelle, cette",
+      "tests": []
+    },
+    {
+      "id": "1.4",
+      "thematique": 1,
+      "numero": 4,
+      "titre": "Pour chaque image utilisée comme CAPTCHA ou comme image-test, ayant une",
+      "tests": []
+    },
+    {
+      "id": "1.5",
+      "thematique": 1,
+      "numero": 5,
+      "titre": "Pour chaque image utilisée comme CAPTCHA, une solution d’accès alternatif au",
+      "tests": []
+    },
+    {
+      "id": "1.6",
+      "thematique": 1,
+      "numero": 6,
+      "titre": "Chaque image porteuse d’information a-t-elle, si nécessaire, une description",
+      "tests": []
+    },
+    {
+      "id": "1.7",
+      "thematique": 1,
+      "numero": 7,
+      "titre": "Pour chaque image porteuse d’information ayant une description détaillée, cette",
+      "tests": []
+    },
+    {
+      "id": "1.8",
+      "thematique": 1,
+      "numero": 8,
+      "titre": "Chaque image texte porteuse d’information, en l’absence d’un mécanisme de",
+      "tests": []
+    },
+    {
+      "id": "1.9",
+      "thematique": 1,
+      "numero": 9,
+      "titre": "Chaque légende d’image est-elle, si nécessaire, correctement reliée à l’image",
+      "tests": []
+    },
+    {
+      "id": "2.1",
+      "thematique": 2,
+      "numero": 1,
+      "titre": "Chaque cadre a-t-il un titre de cadre ?",
+      "tests": []
+    },
+    {
+      "id": "2.2",
+      "thematique": 2,
+      "numero": 2,
+      "titre": "Pour chaque cadre ayant un titre de cadre, ce titre de cadre est-il pertinent ?",
+      "tests": []
+    },
+    {
+      "id": "3.1",
+      "thematique": 3,
+      "numero": 1,
+      "titre": "Dans chaque page web, l’information ne doit pas être donnée uniquement par la",
+      "tests": []
+    },
+    {
+      "id": "3.2",
+      "thematique": 3,
+      "numero": 2,
+      "titre": "Dans chaque page web, le contraste entre la couleur du texte et la couleur de son",
+      "tests": []
+    },
+    {
+      "id": "3.3",
+      "thematique": 3,
+      "numero": 3,
+      "titre": "Dans chaque page web, les couleurs utilisées dans les composants d’interface ou",
+      "tests": []
+    },
+    {
+      "id": "4.1",
+      "thematique": 4,
+      "numero": 1,
+      "titre": "Chaque média temporel pré-enregistré a-t-il, si nécessaire, une transcription",
+      "tests": []
+    },
+    {
+      "id": "4.2",
+      "thematique": 4,
+      "numero": 2,
+      "titre": "Pour chaque média temporel pré-enregistré ayant une transcription textuelle ou",
+      "tests": []
+    },
+    {
+      "id": "4.3",
+      "thematique": 4,
+      "numero": 3,
+      "titre": "Chaque média temporel synchronisé pré-enregistré a-t-il, si nécessaire, des sous-",
+      "tests": []
+    },
+    {
+      "id": "4.4",
+      "thematique": 4,
+      "numero": 4,
+      "titre": "Pour chaque média temporel synchronisé pré-enregistré ayant des sous-titres",
+      "tests": []
+    },
+    {
+      "id": "4.5",
+      "thematique": 4,
+      "numero": 5,
+      "titre": "Chaque média temporel pré-enregistré a-t-il, si nécessaire, une audiodescription",
+      "tests": []
+    },
+    {
+      "id": "4.6",
+      "thematique": 4,
+      "numero": 6,
+      "titre": "Pour chaque média temporel pré-enregistré ayant une audiodescription",
+      "tests": []
+    },
+    {
+      "id": "4.7",
+      "thematique": 4,
+      "numero": 7,
+      "titre": "Chaque média temporel est-il clairement identifiable (hors cas particuliers) ?",
+      "tests": []
+    },
+    {
+      "id": "4.8",
+      "thematique": 4,
+      "numero": 8,
+      "titre": "Chaque média non temporel a-t-il, si nécessaire, une alternative (hors cas",
+      "tests": []
+    },
+    {
+      "id": "4.9",
+      "thematique": 4,
+      "numero": 9,
+      "titre": "Pour chaque média non temporel ayant une alternative, cette alternative est-elle",
+      "tests": []
+    },
+    {
+      "id": "4.10",
+      "thematique": 4,
+      "numero": 10,
+      "titre": "Chaque son déclenché automatiquement est-il contrôlable par l’utilisateur ?",
+      "tests": []
+    },
+    {
+      "id": "4.11",
+      "thematique": 4,
+      "numero": 11,
+      "titre": "La consultation de chaque média temporel est-elle, si nécessaire, contrôlable par",
+      "tests": []
+    },
+    {
+      "id": "4.12",
+      "thematique": 4,
+      "numero": 12,
+      "titre": "La consultation de chaque média non temporel est-elle contrôlable par le clavier",
+      "tests": []
+    },
+    {
+      "id": "4.13",
+      "thematique": 4,
+      "numero": 13,
+      "titre": "Chaque média temporel et non temporel est-il compatible avec les technologies",
+      "tests": []
+    },
+    {
+      "id": "5.1",
+      "thematique": 5,
+      "numero": 1,
+      "titre": "Chaque tableau de données complexe a-t-il un résumé ?",
+      "tests": []
+    },
+    {
+      "id": "5.2",
+      "thematique": 5,
+      "numero": 2,
+      "titre": "Pour chaque tableau de données complexe ayant un résumé, celui-ci est-il",
+      "tests": []
+    },
+    {
+      "id": "5.3",
+      "thematique": 5,
+      "numero": 3,
+      "titre": "Pour chaque tableau de mise en forme, le contenu linéarisé reste-t-il",
+      "tests": []
+    },
+    {
+      "id": "5.4",
+      "thematique": 5,
+      "numero": 4,
+      "titre": "Pour chaque tableau de données ayant un titre, le titre est-il correctement associé",
+      "tests": []
+    },
+    {
+      "id": "5.5",
+      "thematique": 5,
+      "numero": 5,
+      "titre": "Pour chaque tableau de données ayant un titre, celui-ci est-il pertinent ?",
+      "tests": []
+    },
+    {
+      "id": "5.6",
+      "thematique": 5,
+      "numero": 6,
+      "titre": "Pour chaque tableau de données, chaque en-tête de colonne et chaque en-tête",
+      "tests": []
+    },
+    {
+      "id": "5.7",
+      "thematique": 5,
+      "numero": 7,
+      "titre": "Pour chaque tableau de données, la technique appropriée permettant d’associer",
+      "tests": []
+    },
+    {
+      "id": "5.8",
+      "thematique": 5,
+      "numero": 8,
+      "titre": "Chaque tableau de mise en forme ne doit pas utiliser d’éléments propres aux",
+      "tests": []
+    },
+    {
+      "id": "6.1",
+      "thematique": 6,
+      "numero": 1,
+      "titre": "Chaque lien est-il explicite (hors cas particuliers) ?",
+      "tests": []
+    },
+    {
+      "id": "6.2",
+      "thematique": 6,
+      "numero": 2,
+      "titre": "Dans chaque page web, chaque lien a-t-il un intitulé ?",
+      "tests": []
+    },
+    {
+      "id": "7.1",
+      "thematique": 7,
+      "numero": 1,
+      "titre": "Chaque script est-il, si nécessaire, compatible avec les technologies d’assistance ?",
+      "tests": []
+    },
+    {
+      "id": "7.2",
+      "thematique": 7,
+      "numero": 2,
+      "titre": "Pour chaque script ayant une alternative, cette alternative est-elle pertinente ?",
+      "tests": []
+    },
+    {
+      "id": "7.3",
+      "thematique": 7,
+      "numero": 3,
+      "titre": "Chaque script est-il contrôlable par le clavier et par tout dispositif de pointage",
+      "tests": []
+    },
+    {
+      "id": "7.4",
+      "thematique": 7,
+      "numero": 4,
+      "titre": "Pour chaque script qui initie un changement de contexte, l’utilisateur est-il averti",
+      "tests": []
+    },
+    {
+      "id": "7.5",
+      "thematique": 7,
+      "numero": 5,
+      "titre": "Dans chaque page web, les messages de statut sont-ils correctement restitués par",
+      "tests": []
+    },
+    {
+      "id": "8.1",
+      "thematique": 8,
+      "numero": 1,
+      "titre": "Chaque page web est-elle définie par un type de document ?",
+      "tests": []
+    },
+    {
+      "id": "8.2",
+      "thematique": 8,
+      "numero": 2,
+      "titre": "Pour chaque page web, le code source généré est-il valide selon le type de",
+      "tests": []
+    },
+    {
+      "id": "8.3",
+      "thematique": 8,
+      "numero": 3,
+      "titre": "Dans chaque page web, la langue par défaut est-elle présente ?",
+      "tests": []
+    },
+    {
+      "id": "8.4",
+      "thematique": 8,
+      "numero": 4,
+      "titre": "Pour chaque page web ayant une langue par défaut, le code de langue est-il",
+      "tests": []
+    },
+    {
+      "id": "8.5",
+      "thematique": 8,
+      "numero": 5,
+      "titre": "Chaque page web a-t-elle un titre de page ?",
+      "tests": []
+    },
+    {
+      "id": "8.6",
+      "thematique": 8,
+      "numero": 6,
+      "titre": "Pour chaque page web ayant un titre de page, ce titre est-il pertinent ?",
+      "tests": []
+    },
+    {
+      "id": "8.7",
+      "thematique": 8,
+      "numero": 7,
+      "titre": "Dans chaque page web, chaque changement de langue est-il indiqué dans le code",
+      "tests": []
+    },
+    {
+      "id": "8.8",
+      "thematique": 8,
+      "numero": 8,
+      "titre": "Dans chaque page web, le code de langue de chaque changement de langue est-il",
+      "tests": []
+    },
+    {
+      "id": "8.9",
+      "thematique": 8,
+      "numero": 9,
+      "titre": "Dans chaque page web, les balises ne doivent pas être utilisées uniquement à des",
+      "tests": []
+    },
+    {
+      "id": "8.10",
+      "thematique": 8,
+      "numero": 10,
+      "titre": "Dans chaque page web, les changements du sens de lecture sont-ils signalés ?",
+      "tests": []
+    },
+    {
+      "id": "9.1",
+      "thematique": 9,
+      "numero": 1,
+      "titre": "Dans chaque page web, l’information est-elle structurée par l’utilisation",
+      "tests": []
+    },
+    {
+      "id": "9.2",
+      "thematique": 9,
+      "numero": 2,
+      "titre": "Dans chaque page web, la structure du document est-elle cohérente (hors cas",
+      "tests": []
+    },
+    {
+      "id": "9.3",
+      "thematique": 9,
+      "numero": 3,
+      "titre": "Dans chaque page web, chaque liste est-elle correctement structurée ?",
+      "tests": []
+    },
+    {
+      "id": "9.4",
+      "thematique": 9,
+      "numero": 4,
+      "titre": "Dans chaque page web, chaque citation est-elle correctement indiquée ?",
+      "tests": []
+    },
+    {
+      "id": "10.1",
+      "thematique": 10,
+      "numero": 1,
+      "titre": "Dans le site web, des feuilles de styles sont-elles utilisées pour contrôler la",
+      "tests": []
+    },
+    {
+      "id": "10.2",
+      "thematique": 10,
+      "numero": 2,
+      "titre": "Dans chaque page web, le contenu visible porteur d’information reste-t-il",
+      "tests": []
+    },
+    {
+      "id": "10.3",
+      "thematique": 10,
+      "numero": 3,
+      "titre": "Dans chaque page web, l’information reste-t-elle compréhensible lorsque les",
+      "tests": []
+    },
+    {
+      "id": "10.4",
+      "thematique": 10,
+      "numero": 4,
+      "titre": "Dans chaque page web, le texte reste-t-il lisible lorsque la taille des caractères est",
+      "tests": []
+    },
+    {
+      "id": "10.5",
+      "thematique": 10,
+      "numero": 5,
+      "titre": "Dans chaque page web, les déclarations CSS de couleurs de fond d’élément et",
+      "tests": []
+    },
+    {
+      "id": "10.6",
+      "thematique": 10,
+      "numero": 6,
+      "titre": "Dans chaque page web, chaque lien dont la nature n’est pas évidente est-il",
+      "tests": []
+    },
+    {
+      "id": "10.7",
+      "thematique": 10,
+      "numero": 7,
+      "titre": "Dans chaque page web, pour chaque élément recevant le focus, la prise de focus",
+      "tests": []
+    },
+    {
+      "id": "10.8",
+      "thematique": 10,
+      "numero": 8,
+      "titre": "Pour chaque page web, les contenus cachés ont-ils vocation à être ignorés par les",
+      "tests": []
+    },
+    {
+      "id": "10.9",
+      "thematique": 10,
+      "numero": 9,
+      "titre": "Dans chaque page web, l’information ne doit pas être donnée uniquement par la",
+      "tests": []
+    },
+    {
+      "id": "10.10",
+      "thematique": 10,
+      "numero": 10,
+      "titre": "Dans chaque page web, l’information ne doit pas être donnée par la forme,",
+      "tests": []
+    },
+    {
+      "id": "10.11",
+      "thematique": 10,
+      "numero": 11,
+      "titre": "Pour chaque page web, les contenus peuvent-ils être présentés sans perte",
+      "tests": []
+    },
+    {
+      "id": "10.12",
+      "thematique": 10,
+      "numero": 12,
+      "titre": "Dans chaque page web, les propriétés d’espacement du texte peuvent-elles être",
+      "tests": []
+    },
+    {
+      "id": "10.13",
+      "thematique": 10,
+      "numero": 13,
+      "titre": "Dans chaque page web, les contenus additionnels apparaissant à la prise de",
+      "tests": []
+    },
+    {
+      "id": "10.14",
+      "thematique": 10,
+      "numero": 14,
+      "titre": "Dans chaque page web, les contenus additionnels apparaissant via les styles CSS",
+      "tests": []
+    },
+    {
+      "id": "11.1",
+      "thematique": 11,
+      "numero": 1,
+      "titre": "Critère 11.1 Chaque champ de formulaire a-t-il une étiquette ?",
+      "tests": []
+    },
+    {
+      "id": "11.2",
+      "thematique": 11,
+      "numero": 2,
+      "titre": "Critère 11.2 Chaque étiquette associée à un champ de formulaire est-elle pertinente (hors cas particuliers) ?",
+      "tests": []
+    },
+    {
+      "id": "11.3",
+      "thematique": 11,
+      "numero": 3,
+      "titre": "Dans chaque formulaire, chaque étiquette associée à un champ de formulaire",
+      "tests": []
+    },
+    {
+      "id": "11.4",
+      "thematique": 11,
+      "numero": 4,
+      "titre": "Dans chaque formulaire, chaque étiquette de champ et son champ associé sont-",
+      "tests": []
+    },
+    {
+      "id": "11.5",
+      "thematique": 11,
+      "numero": 5,
+      "titre": "Dans chaque formulaire, les champs de même nature sont-ils regroupés, si",
+      "tests": []
+    },
+    {
+      "id": "11.6",
+      "thematique": 11,
+      "numero": 6,
+      "titre": "Dans chaque formulaire, chaque regroupement de champs de même nature a-t-il",
+      "tests": []
+    },
+    {
+      "id": "11.7",
+      "thematique": 11,
+      "numero": 7,
+      "titre": "Dans chaque formulaire, chaque légende associée à un regroupement de champs",
+      "tests": []
+    },
+    {
+      "id": "11.8",
+      "thematique": 11,
+      "numero": 8,
+      "titre": "Dans chaque formulaire, les items de même nature d’une liste de choix sont-ils",
+      "tests": []
+    },
+    {
+      "id": "11.9",
+      "thematique": 11,
+      "numero": 9,
+      "titre": "Dans chaque formulaire, l’intitulé de chaque bouton est-il pertinent (hors cas",
+      "tests": []
+    },
+    {
+      "id": "11.10",
+      "thematique": 11,
+      "numero": 10,
+      "titre": "Dans chaque formulaire, le contrôle de saisie est-il utilisé de manière pertinente",
+      "tests": []
+    },
+    {
+      "id": "11.11",
+      "thematique": 11,
+      "numero": 11,
+      "titre": "Dans chaque formulaire, le contrôle de saisie est-il accompagné, si nécessaire, de",
+      "tests": []
+    },
+    {
+      "id": "11.12",
+      "thematique": 11,
+      "numero": 12,
+      "titre": "Pour chaque formulaire qui modifie ou supprime des données, ou qui transmet",
+      "tests": []
+    },
+    {
+      "id": "11.13",
+      "thematique": 11,
+      "numero": 13,
+      "titre": "La finalité d’un champ de saisie peut-elle être déduite pour faciliter le",
+      "tests": []
+    },
+    {
+      "id": "12.1",
+      "thematique": 12,
+      "numero": 1,
+      "titre": "Chaque ensemble de pages dispose-t-il de deux systèmes de navigation",
+      "tests": []
+    },
+    {
+      "id": "12.2",
+      "thematique": 12,
+      "numero": 2,
+      "titre": "Dans chaque ensemble de pages, le menu et les barres de navigation sont-ils",
+      "tests": []
+    },
+    {
+      "id": "12.3",
+      "thematique": 12,
+      "numero": 3,
+      "titre": "La page « plan du site » est-elle pertinente ?",
+      "tests": []
+    },
+    {
+      "id": "12.4",
+      "thematique": 12,
+      "numero": 4,
+      "titre": "Dans chaque ensemble de pages, la page « plan du site » est-elle accessible à",
+      "tests": []
+    },
+    {
+      "id": "12.5",
+      "thematique": 12,
+      "numero": 5,
+      "titre": "Dans chaque ensemble de pages, le moteur de recherche est-il atteignable de",
+      "tests": []
+    },
+    {
+      "id": "12.6",
+      "thematique": 12,
+      "numero": 6,
+      "titre": "Les zones de regroupement de contenus présentes dans plusieurs pages web",
+      "tests": []
+    },
+    {
+      "id": "12.7",
+      "thematique": 12,
+      "numero": 7,
+      "titre": "Dans chaque page web, un lien d’évitement ou d’accès rapide à la zone de",
+      "tests": []
+    },
+    {
+      "id": "12.8",
+      "thematique": 12,
+      "numero": 8,
+      "titre": "Dans chaque page web, l’ordre de tabulation est-il cohérent ?",
+      "tests": []
+    },
+    {
+      "id": "12.9",
+      "thematique": 12,
+      "numero": 9,
+      "titre": "Dans chaque page web, la navigation ne doit pas contenir de piège au clavier.",
+      "tests": []
+    },
+    {
+      "id": "12.10",
+      "thematique": 12,
+      "numero": 10,
+      "titre": "Dans chaque page web, les raccourcis clavier n’utilisant qu’une seule touche",
+      "tests": []
+    },
+    {
+      "id": "12.11",
+      "thematique": 12,
+      "numero": 11,
+      "titre": "Dans chaque page web, les contenus additionnels apparaissant au survol, à la",
+      "tests": []
+    },
+    {
+      "id": "13.1",
+      "thematique": 13,
+      "numero": 1,
+      "titre": "Pour chaque page web, l’utilisateur a-t-il le contrôle de chaque limite de temps",
+      "tests": []
+    },
+    {
+      "id": "13.2",
+      "thematique": 13,
+      "numero": 2,
+      "titre": "Dans chaque page web, l’ouverture d’une nouvelle fenêtre ne doit pas être",
+      "tests": []
+    },
+    {
+      "id": "13.3",
+      "thematique": 13,
+      "numero": 3,
+      "titre": "Dans chaque page web, chaque document bureautique en téléchargement",
+      "tests": []
+    },
+    {
+      "id": "13.4",
+      "thematique": 13,
+      "numero": 4,
+      "titre": "Pour chaque document bureautique ayant une version accessible, cette version",
+      "tests": []
+    },
+    {
+      "id": "13.5",
+      "thematique": 13,
+      "numero": 5,
+      "titre": "Dans chaque page web, chaque contenu cryptique (art ASCII, émoticône,",
+      "tests": []
+    },
+    {
+      "id": "13.6",
+      "thematique": 13,
+      "numero": 6,
+      "titre": "Dans chaque page web, pour chaque contenu cryptique (art ASCII, émoticône,",
+      "tests": []
+    },
+    {
+      "id": "13.7",
+      "thematique": 13,
+      "numero": 7,
+      "titre": "Dans chaque page web, les changements brusques de luminosité ou les effets de",
+      "tests": []
+    },
+    {
+      "id": "13.8",
+      "thematique": 13,
+      "numero": 8,
+      "titre": "Dans chaque page web, chaque contenu en mouvement ou clignotant est-il",
+      "tests": []
+    },
+    {
+      "id": "13.9",
+      "thematique": 13,
+      "numero": 9,
+      "titre": "Dans chaque page web, le contenu proposé est-il consultable quelle que soit",
+      "tests": []
+    },
+    {
+      "id": "13.10",
+      "thematique": 13,
+      "numero": 10,
+      "titre": "Dans chaque page web, les fonctionnalités utilisables ou disponibles au moyen",
+      "tests": []
+    },
+    {
+      "id": "13.11",
+      "thematique": 13,
+      "numero": 11,
+      "titre": "Dans chaque page web, les actions déclenchées au moyen d’un dispositif de",
+      "tests": []
+    },
+    {
+      "id": "13.12",
+      "thematique": 13,
+      "numero": 12,
+      "titre": "Dans chaque page web, les fonctionnalités qui impliquent un mouvement de",
+      "tests": []
+    }
+  ],
+  "total_criteres": 106
+}
