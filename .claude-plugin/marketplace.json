@@ -1,21 +1,22 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "rgaa-marketplace",
-  "version": "1.0.0",
-  "description": "Marketplace CEGAPE — plugins d'audit conformité (RGAA, et à venir).",
   "owner": {
     "name": "Karim Cassam Chenaï",
-    "email": "karim.cassam@cegape.fr",
-    "organization": "CEGAPE"
+    "email": "karim.cassam@cegape.fr"
+  },
+  "metadata": {
+    "description": "Marketplace CEGAPE — plugins d'audit conformité (RGAA, à venir).",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "rgaa-audit",
-      "source": ".",
-      "description": "Audit RGAA 4.1.2 d'un site ou d'une application web (analyse statique multi-frameworks + audit dynamique navigateur + génération de la déclaration d'accessibilité).",
-      "version": "1.0.0",
-      "category": "compliance",
-      "keywords": ["rgaa", "accessibility", "wcag", "a11y", "compliance"]
+      "description": "Audit RGAA 4.1.2 d'un site ou d'une application web — analyse statique multi-frameworks (HTML, JSP, JSX/TSX, Vue, Svelte, PHP, CSS), audit dynamique navigateur, génération de la déclaration d'accessibilité (.md + .html) et de la grille de conformité (.csv).",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/rgaa-audit"
+      ]
     }
   ]
 }
