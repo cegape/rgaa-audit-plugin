@@ -1,8 +1,8 @@
 # Plugin `rgaa-audit`
 
-Plugin Claude (Code / Cowork) pour réaliser un **audit RGAA 4.1.2** complet d'un site ou d'une application web — de l'analyse statique du code source à la génération d'une déclaration d'accessibilité prête à publier.
+Plugin Claude (Code / Cowork) pour réaliser un **audit RGAA 4.1.2** complet d'un site ou d'une application web — de l'analyse statique du code source à la génération des trois livrables réglementaires : **déclaration d'accessibilité**, **schéma pluriannuel** (3 ans) et **plan d'action annuel**.
 
-> RGAA = Référentiel Général d'Amélioration de l'Accessibilité, version 4.1.2, en vigueur en France. Concerne les services publics, leurs délégataires, et les entreprises dont le chiffre d'affaires en France dépasse 250 M€ (article 47 de la loi n° 2005-102 ; arrêté du 20/09/2019).
+> RGAA = Référentiel Général d'Amélioration de l'Accessibilité, version 4.1.2, en vigueur en France. Concerne les services publics, leurs délégataires, et les entreprises dont le chiffre d'affaires en France dépasse 250 M€ (article 47 de la loi n° 2005-102 ; décret n° 2019-768 du 24/07/2019 ; arrêté du 20/09/2019).
 
 ## Public visé
 
@@ -16,11 +16,12 @@ Plugin Claude (Code / Cowork) pour réaliser un **audit RGAA 4.1.2** complet d'u
 1. **Analyse statique** de l'arborescence — HTML, JSP/JSPF, JSX/TSX (React), Vue, Svelte, PHP/Twig/Blade, ERB, Handlebars + CSS/SCSS/Sass/Less. Détecte les patterns problématiques pour environ 18 critères "outillables" (alt manquants, lang absent, hiérarchie de titres, labels de formulaire, contrastes, tableaux de mise en forme, liens factices, etc.).
 2. **Audit dynamique** via Claude in Chrome : injection d'une sonde JS qui mesure `lang`, `title`, hiérarchie de titres, landmarks ARIA, labels, contrastes WCAG calculés, liens factices, tableaux, iframes, focus visible.
 3. **Verdict par critère** sur les 106 critères du RGAA 4.1.2 (C / NC / NA / NT).
-4. **Génération des livrables** :
-   - Déclaration d'accessibilité (Markdown + HTML, prête à publier)
-   - Grille de conformité (CSV, traçable critère par critère)
-   - Rapport détaillé avec findings (Markdown)
-5. **Plan d'action** trié par effort/impact (quick wins → refonte structurelle).
+4. **Génération des trois livrables réglementaires** (article 47 de la loi n° 2005-102, décret n° 2019-768, arrêté du 20/09/2019) :
+   - **Déclaration d'accessibilité** par service (Markdown + HTML, prête à publier sur la page d'accueil).
+   - **Schéma pluriannuel d'accessibilité** sur 3 ans (politique, organisation, ressources humaines et financières, formation, marchés publics).
+   - **Plan d'action annuel** (bilan, actions par thématique, jalons trimestriels, indicateurs), pré-rempli avec les non-conformités priorisées issues de l'audit.
+5. **Grille de conformité CSV** (traçable critère par critère) pour pilotage interne et CI.
+6. **Priorisation** des actions de remédiation par effort/impact (quick wins → refonte structurelle).
 
 ## Périmètre supporté
 
@@ -78,10 +79,10 @@ Deux façons d'invoquer le plugin dans Claude (Cowork ou Code) :
 
 Dans les deux cas, Claude va :
 
-1. Poser les questions de cadrage (périmètre, identifiants de test si nécessaire, livrables attendus).
+1. Poser les questions de cadrage (périmètre, identifiants de test si nécessaire, livrables attendus parmi déclaration / schéma / plan).
 2. Lancer `scripts/audit_static.py` sur le code source.
 3. Naviguer sur le site déployé via Claude in Chrome et injecter `scripts/dynamic_probe.js`.
-4. Croiser les résultats et générer la déclaration d'accessibilité dans `report/`.
+4. Croiser les résultats et générer les livrables réglementaires dans `report/` : déclaration d'accessibilité, schéma pluriannuel (3 ans) et plan d'action annuel.
 
 ## Utilisation en CLI / CI
 
@@ -89,7 +90,7 @@ Dans les deux cas, Claude va :
 # Analyse statique
 python3 skills/rgaa-audit/scripts/audit_static.py ./src ./report/findings_static.json
 
-# Génération de la déclaration
+# Génération de la déclaration d'accessibilité seule
 python3 skills/rgaa-audit/scripts/build_report.py \
     --criteres skills/rgaa-audit/data/criteres_rgaa_4_1_2.json \
     --static ./report/findings_static.json \
@@ -97,9 +98,23 @@ python3 skills/rgaa-audit/scripts/build_report.py \
     --site-name "Mon site" \
     --site-url "https://exemple.fr" \
     --org "Mon organisation"
+
+# Génération des trois livrables réglementaires
+# (déclaration + schéma pluriannuel 3 ans + plan d'action annuel)
+python3 skills/rgaa-audit/scripts/build_report.py \
+    --criteres skills/rgaa-audit/data/criteres_rgaa_4_1_2.json \
+    --static ./report/findings_static.json \
+    --out-dir ./report \
+    --site-name "Mon site" \
+    --site-url "https://exemple.fr" \
+    --org "Mon organisation" \
+    --with-schema --with-plan \
+    --periode 2026-2028 \
+    --url-publication "https://exemple.fr/accessibilite"
 ```
 
-À intégrer dans une pipeline CI (GitLab CI / GitHub Actions / Jenkins) pour suivre la régression accessibilité à chaque merge request.
+Le plan d'action est pré-rempli avec les non-conformités priorisées par fréquence. Les sections stratégiques (politique, jalons, indicateurs, ressources humaines et financières) restent à compléter par le référent accessibilité.
+
 
 ## Limites
 

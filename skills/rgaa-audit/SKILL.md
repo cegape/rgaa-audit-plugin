@@ -1,6 +1,6 @@
 ---
 name: rgaa-audit
-description: Audit RGAA 4.1.2 (Référentiel Général d'Amélioration de l'Accessibilité — France) d'un site ou d'une application web. Outille les 106 critères du RGAA, automatise la collecte de non-conformités via analyse statique (HTML/JSP/PHP/Vue/React/CSS/JS) et audit dynamique (navigateur), puis produit une déclaration d'accessibilité au format .md/.html et un rapport détaillé. Déclencher dès qu'un utilisateur demande un "audit accessibilité", "audit RGAA", "déclaration d'accessibilité", "audit WCAG", "conformité accessibilité numérique", "test accessibilité", ou mentionne le RGAA 4.x. Fonctionne sur n'importe quel projet web : applications Java/JSP, sites statiques HTML, projets React/Vue/Angular/Svelte, sites PHP/WordPress.
+description: Audit RGAA 4.1.2 (Référentiel Général d'Amélioration de l'Accessibilité — France) d'un site ou d'une application web. Outille les 106 critères du RGAA, automatise la collecte de non-conformités via analyse statique (HTML/JSP/PHP/Vue/React/CSS/JS) et audit dynamique (navigateur), puis produit les trois livrables réglementaires : déclaration d'accessibilité (.md/.html), schéma pluriannuel sur 3 ans, et plan d'action annuel. Déclencher dès qu'un utilisateur demande un "audit accessibilité", "audit RGAA", "déclaration d'accessibilité", "schéma pluriannuel", "plan d'action accessibilité", "audit WCAG", "conformité accessibilité numérique", "test accessibilité", ou mentionne le RGAA 4.x. Fonctionne sur n'importe quel projet web : applications Java/JSP, sites statiques HTML, projets React/Vue/Angular/Svelte, sites PHP/WordPress.
 ---
 
 # RGAA — Audit d'accessibilité numérique
@@ -11,7 +11,13 @@ Ce skill outille l'audit RGAA 4.1.2 d'un site ou d'une application web et produi
 
 Le RGAA (Référentiel Général d'Amélioration de l'Accessibilité) est le référentiel français de conformité accessibilité, dérivé de WCAG 2.1 AA. La version courante est **4.1.2** (106 critères répartis en 13 thématiques).
 
-L'obligation s'applique aux personnes morales de droit public et aux entreprises dépassant 250 M€ de CA, sous peine d'amende administrative (arrêté du 20/09/2019). Tout site concerné doit publier une **déclaration d'accessibilité** mentionnant un taux de conformité et les non-conformités constatées.
+L'obligation s'applique aux personnes morales de droit public et aux entreprises dépassant 250 M€ de CA, sous peine d'amende administrative (arrêté du 20/09/2019).
+
+Le cadre réglementaire (article 47 de la loi n° 2005-102, décret n° 2019-768 du 24/07/2019, arrêté du 20/09/2019) impose **trois livrables**, distincts mais complémentaires :
+
+1. **Déclaration d'accessibilité** — par service en ligne, mentionnant le taux de conformité et les non-conformités constatées. À publier sur la page d'accueil.
+2. **Schéma pluriannuel d'accessibilité** — couvrant une période de **3 ans**, présentant la politique, l'organisation et les ressources de l'organisation en matière d'accessibilité numérique.
+3. **Plan d'action annuel** — déclinaison opérationnelle du schéma pour l'année en cours (bilan, actions, jalons, indicateurs).
 
 ## Quand utiliser ce skill
 
@@ -34,11 +40,12 @@ L'obligation s'applique aux personnes morales de droit public et aux entreprises
    - Tester la navigation au clavier (Tab, Shift+Tab, focus visible).
    - Si demandé, tester avec un lecteur d'écran (VoiceOver/NVDA).
 5. **Verdict par critère** — Pour chaque critère RGAA : C (Conforme), NC (Non Conforme), NA (Non Applicable) ou NT (Non Testé). Calculer le taux = C / (C + NC).
-6. **Livrables** — À partir des templates :
-   - `templates/declaration-accessibilite.md.tpl` et `.html.tpl`
-   - `templates/rapport-detaille.md.tpl`
-   - `templates/grille-conformite.csv.tpl`
-7. **Plan d'action** — Tri par effort/impact (quick wins → refonte structurelle).
+6. **Livrables réglementaires** — À partir des templates :
+   - `templates/declaration-accessibilite.md.tpl` / `.html.tpl` (par service)
+   - `templates/schema-pluriannuel.md.tpl` / `.html.tpl` (3 ans, par organisation)
+   - `templates/plan-action.md.tpl` / `.html.tpl` (annuel, par organisation)
+   - Grille de conformité CSV (traçabilité critère par critère)
+7. **Priorisation** — Les actions de remédiation du plan d'action sont triées par effort/impact (quick wins → refonte structurelle) à partir des occurrences de non-conformités détectées.
 
 ## Structure du skill
 
@@ -54,7 +61,11 @@ rgaa-audit/
 │   └── update_referentiel.py        (met à jour le criteres.json depuis github.com/DISIC/RGAA)
 ├── templates/
 │   ├── declaration-accessibilite.md.tpl
-│   └── declaration-accessibilite.html.tpl
+│   ├── declaration-accessibilite.html.tpl
+│   ├── schema-pluriannuel.md.tpl
+│   ├── schema-pluriannuel.html.tpl
+│   ├── plan-action.md.tpl
+│   └── plan-action.html.tpl
 └── references/
     └── methodologie.md              (rappel méthodologique RGAA)
 ```
@@ -106,12 +117,30 @@ python3 scripts/build_report.py \
 
 Produit `declaration-accessibilite.md`, `declaration-accessibilite.html`, `grille-conformite.csv`.
 
-### 4) Mise à jour de la déclaration
+Pour générer en plus les deux livrables stratégiques (schéma pluriannuel sur 3 ans et plan d'action annuel) :
+
+```bash
+python3 scripts/build_report.py \
+  --criteres data/criteres_rgaa_4_1_2.json \
+  --static findings_static.json \
+  --dynamic findings_dynamic.json \
+  --out-dir report/ \
+  --site-name "Mon site" \
+  --site-url "https://exemple.fr" \
+  --org "Mon organisation" \
+  --with-schema --with-plan \
+  --periode 2026-2028 \
+  --url-publication "https://exemple.fr/accessibilite"
+```
+
+Le plan d'action est pré-rempli avec les non-conformités priorisées par fréquence d'occurrences. Les sections « politique », « ressources humaines / financières », « jalons trimestriels » et « indicateurs cibles » restent à compléter manuellement par le référent accessibilité — ce sont des choix stratégiques propres à chaque organisation.
+
+### 4) Mise à jour des livrables
 
 Avant publication, **toujours** :
-- Compléter les coordonnées de contact (e-mail, postal).
-- Publier sur la page d'accueil avec un lien "Accessibilité" (article 47).
-- Tenir à jour : la déclaration doit être réévaluée au moins tous les 3 ans, ou à toute évolution substantielle.
+- **Déclaration d'accessibilité** : compléter les coordonnées de contact (e-mail, postal). Publier sur la page d'accueil avec un lien "Accessibilité" (article 47). Réévaluer au moins tous les 3 ans, ou à toute évolution substantielle.
+- **Schéma pluriannuel** : compléter les coordonnées du référent accessibilité, le périmètre des sites concernés, la politique d'achats publics, le budget. Le schéma porte sur **3 ans** et doit être publié sur le site institutionnel.
+- **Plan d'action annuel** : compléter les jalons trimestriels, les indicateurs cibles, le bilan de l'année précédente. À publier chaque année avec le bilan du plan précédent.
 
 ## Points d'attention
 
