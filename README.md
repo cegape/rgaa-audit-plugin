@@ -37,7 +37,14 @@ Le plugin est agnostique du framework. Il fonctionne sur :
 
 ## Installation
 
-### Comme plugin Claude Code
+### Dans Claude Cowork (interface graphique)
+
+1. Ouvrir **Customize** (menu paramètres).
+2. **Ajouter un plugin personnel** → **Créer un plugin** → **Ajouter une marketplace**.
+3. Coller l'URL : `https://github.com/cegape/rgaa-audit-plugin`
+4. Cliquer sur **Synchro**, puis installer le plugin `rgaa-audit`.
+
+### Dans Claude Code (CLI)
 
 ```bash
 # Ajouter ce dépôt comme marketplace
@@ -59,11 +66,17 @@ Au prochain démarrage, le skill `rgaa-audit` sera proposé automatiquement dès
 
 ## Utilisation
 
-Dans Claude, il suffit de demander en langage naturel :
+Deux façons d'invoquer le plugin dans Claude (Cowork ou Code) :
+
+**En langage naturel** (déclenchement automatique sur le sens de la demande) :
 
 > « Fais-moi l'audit RGAA du site `https://exemple.fr`, le code est dans `~/repo/monsite/src/` »
 
-Claude va :
+**De manière explicite** via le picker de commandes :
+
+> Tape `/` puis sélectionne `rgaa-audit` dans la liste.
+
+Dans les deux cas, Claude va :
 
 1. Poser les questions de cadrage (périmètre, identifiants de test si nécessaire, livrables attendus).
 2. Lancer `scripts/audit_static.py` sur le code source.
