@@ -11,6 +11,73 @@ Plugin Claude (Code / Cowork) pour réaliser un **audit RGAA 4.1.2** complet d'u
 - **Responsables accessibilité** et chefs de projet qui pilotent une mise en conformité.
 - **Développeurs** qui veulent un retour automatique sur leurs PR avant de les fusionner.
 
+## Cadre réglementaire
+
+L'accessibilité numérique est encadrée en France par l'**article 47 de la loi n° 2005-102 du 11 février 2005** (modifié par la loi du 7 octobre 2016 dite « pour une République numérique »), précisé par le **décret n° 2019-768 du 24 juillet 2019** et l'**arrêté du 20 septembre 2019** qui approuve la version 4 du RGAA.
+
+### Qui est concerné
+
+- Les personnes morales de droit public (État, collectivités territoriales, établissements publics).
+- Les organismes délégataires d'une mission de service public.
+- Les organismes privés à but non lucratif fournissant des services essentiels au public ou répondant aux besoins essentiels d'une personne handicapée.
+- Les entreprises dont le chiffre d'affaires en France dépasse **250 M€** (moyenne sur les trois derniers exercices).
+
+### Périmètre des services concernés
+
+L'obligation couvre les **sites internet, intranets, extranets, applications mobiles, progiciels et mobilier urbain numérique** édités ou utilisés par les organismes concernés.
+
+### Trois livrables obligatoires
+
+L'arrêté du 20/09/2019 impose la publication de trois documents distincts :
+
+1. **Déclaration d'accessibilité** — un document **par service en ligne**, mentionnant l'état de conformité (conforme / partiellement conforme / non conforme), le taux de conformité au RGAA, les non-conformités constatées et les voies de recours. À publier sur la page d'accueil avec un lien intitulé « Accessibilité ».
+2. **Schéma pluriannuel d'accessibilité numérique** — un document **par organisation**, couvrant une période de **3 ans**, présentant la politique, l'organisation, les ressources et les moyens engagés.
+3. **Plan d'action annuel** — déclinaison opérationnelle du schéma pour l'année en cours.
+
+### Mentions et pages obligatoires
+
+L'arrêté du 20/09/2019 distingue deux obligations strictes et plusieurs recommandations.
+
+**Obligatoire — sur la page d'accueil**
+
+La page d'accueil affiche obligatoirement l'une des mentions suivantes (telle quelle, sans variante) :
+
+- « **Accessibilité : totalement conforme** » si 100 % des critères RGAA applicables sont respectés ;
+- « **Accessibilité : partiellement conforme** » si au moins 50 % des critères RGAA sont respectés ;
+- « **Accessibilité : non conforme** » dans les autres cas (ou en l'absence d'audit en cours de validité).
+
+**Obligatoire — page « Accessibilité » accessible depuis toutes les pages**
+
+Le service en ligne dispose d'une page dédiée intitulée « Accessibilité », **accessible directement depuis la page d'accueil et depuis n'importe quelle page du service** (donc en pratique : un lien en pied de page sur toutes les pages). Cette page contient :
+
+- la déclaration d'accessibilité ;
+- le schéma pluriannuel de mise en accessibilité (ou un lien vers celui-ci) ;
+- le plan d'action de l'année en cours (ou un lien vers celui-ci).
+
+**Recommandé (bonnes pratiques DINUM)**
+
+- Adresse standardisée **`/accessibilite`** pour la page dédiée (`https://www.exemple.fr/accessibilite`).
+- Mention de conformité **cliquable**, renvoyant vers la page Accessibilité ou directement vers la déclaration.
+- En pratique, l'implémentation standard combine les deux obligations en un seul élément : un lien « **Accessibilité : <niveau>** » placé en pied de page sur toutes les pages, pointant vers `/accessibilite`. Cette combinaison satisfait à la fois l'obligation d'accès depuis toute page et la recommandation de mention cliquable.
+
+### Mise à jour
+
+- La déclaration d'accessibilité doit être réévaluée à toute évolution substantielle du service et, en tout état de cause, au moins **tous les 3 ans**.
+- Le schéma pluriannuel est révisé tous les 3 ans.
+- Le plan d'action est publié chaque année avec le bilan du plan précédent.
+
+### Sanctions
+
+Le défaut de publication des documents prévus, ou le défaut de la mention d'accessibilité, fait l'objet d'une **sanction administrative** prononcée par l'autorité de contrôle. Le montant maximal est fixé par les textes en vigueur (porté à 50 000 € par service en ligne par la loi REEN n° 2021-1485) et peut être renouvelé chaque année tant que le manquement persiste.
+
+### Pour aller plus loin
+
+- Méthode RGAA et critères : https://accessibilite.numerique.gouv.fr/
+- Obligations légales (DINUM) : https://accessibilite.numerique.gouv.fr/obligations/
+- Article 47 modifié : [Légifrance](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033219922/)
+- Décret n° 2019-768 : [Légifrance](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000038811937)
+- Arrêté du 20/09/2019 : [Légifrance](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000039125722)
+
 ## Ce que fait le plugin
 
 1. **Analyse statique** de l'arborescence — HTML, JSP/JSPF, JSX/TSX (React), Vue, Svelte, PHP/Twig/Blade, ERB, Handlebars + CSS/SCSS/Sass/Less. Détecte les patterns problématiques pour environ 18 critères "outillables" (alt manquants, lang absent, hiérarchie de titres, labels de formulaire, contrastes, tableaux de mise en forme, liens factices, etc.).
