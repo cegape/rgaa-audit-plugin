@@ -21,7 +21,7 @@ import pathlib
 import collections
 import html
 
-EXT_HTMLISH = {".html", ".htm", ".jsp", ".jspf", ".jsx", ".tsx",
+EXT_HTMLISH = {".html", ".htm", ".jsp", ".jspf", ".gsp", ".jsx", ".tsx",
                ".vue", ".svelte", ".php", ".phtml", ".twig", ".hbs", ".erb"}
 EXT_CSS = {".css", ".scss", ".sass", ".less"}
 
