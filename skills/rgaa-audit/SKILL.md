@@ -1,6 +1,7 @@
 ---
 name: rgaa-audit
-description: Audit RGAA 4.1.2 (Référentiel Général d'Amélioration de l'Accessibilité — France) d'un site ou d'une application web. Outille les 106 critères du RGAA, automatise la collecte de non-conformités via analyse statique (HTML/JSP/PHP/Vue/React/CSS/JS) et audit dynamique (navigateur), puis produit les trois livrables réglementaires : déclaration d'accessibilité (.md/.html), schéma pluriannuel sur 3 ans, et plan d'action annuel. Déclencher dès qu'un utilisateur demande un "audit accessibilité", "audit RGAA", "déclaration d'accessibilité", "schéma pluriannuel", "plan d'action accessibilité", "audit WCAG", "conformité accessibilité numérique", "test accessibilité", ou mentionne le RGAA 4.x. Fonctionne sur n'importe quel projet web : applications Java/JSP, sites statiques HTML, projets React/Vue/Angular/Svelte, sites PHP/WordPress.
+description: >-
+  Audit RGAA 4.1.2 (Référentiel Général d'Amélioration de l'Accessibilité — France) d'un site ou d'une application web. Outille les 106 critères du RGAA, automatise la collecte de non-conformités via analyse statique (HTML/JSP/PHP/Vue/React/CSS/JS) et audit dynamique (navigateur), puis produit les trois livrables réglementaires : déclaration d'accessibilité (.md/.html), schéma pluriannuel sur 3 ans, et plan d'action annuel. Déclencher dès qu'un utilisateur demande un "audit accessibilité", "audit RGAA", "déclaration d'accessibilité", "schéma pluriannuel", "plan d'action accessibilité", "audit WCAG", "conformité accessibilité numérique", "test accessibilité", ou mentionne le RGAA 4.x. Fonctionne sur n'importe quel projet web : applications Java/JSP, sites statiques HTML, projets React/Vue/Angular/Svelte, sites PHP/WordPress.
 ---
 
 # RGAA — Audit d'accessibilité numérique
